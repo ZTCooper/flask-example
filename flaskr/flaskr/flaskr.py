@@ -3,8 +3,8 @@ import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 
 #create application
-app = Flask('flaskr')
-app.config.from_object('flaskr')
+app = Flask(__name__)
+app.config.from_object(__name__)
 
 #configuration
 app.config.update(dict(
@@ -14,7 +14,7 @@ app.config.update(dict(
 	USERNAME = 'admin',
 	PASSWORD = 'default'
 	))
-app.config.from_envvar('FLASK_SETTINGS', silent = True)
+app.config.from_envvar('FLASKR_SETTINGS', silent = True)
 #从配置文件中加载配置
 
 #Connects to the specific database
