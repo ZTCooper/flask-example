@@ -1,5 +1,5 @@
 ### flask快速入门
-'''python
+```python
 from flask import Flask
 from flask import render_template	#模板渲染
 
@@ -156,4 +156,4 @@ app.wsgi_app = LighttpdCGIRootFix(app.wsgi_app)
 if __name__ == '__main__':
 	#app.debug = True
 	app.run(debug = True)	#app.run(host = '0.0.0.0') 监听所有公网IP
-'''
+```
